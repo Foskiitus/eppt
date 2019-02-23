@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="pt.ecopista.portugal" version="1.0.7" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="pt.ecopista.portugal" version="1.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Ecopistas do Minho</name>
     <description>
         Procure novas ecopistas/ecovias para passear no minho de Portugal
     </description>
-    <author email="support@phonegap.com" href="http://ecopista.pt">
+    <author email="support@ecopista.pt" href="http://ecopista.pt">
         Ricardo Lopes
     </author>
     <content src="index.html" />
