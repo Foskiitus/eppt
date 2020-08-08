@@ -5,22 +5,237 @@
  *
  * Made By MaterializeCSS.com
  */
+ /* Add padding BETWEEN each column (if you want) */
+
+/* listas*/
+.center{
+  text-align: center;
+}
+
+.card {
+  margin: 4%;
+  border-radius: 15px;
+}
+.view {
+  margin: -4%;
+  border-radius: 15px;
+}
+
+/* Cards */
+
+.card .view .mask .white-text{
+  font-size: xx-large;
+}
+
+
+/* Navbar */
+.navbar-brand{
+  padding-left: 5px;
+}
+
+/* General */
+
+body{
+  background-color: #f6f6f6;
+}
+
+
+
+ .start{
+  margin-bottom: 50px;
+}
+ * {
+  box-sizing: border-box;
+}
+ .row,
+.row > .column {
+  padding: 8px;
+}
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+   color: #ffffff;
+}
+.btn i p {
+  font-size: 0.6rem;
+  padding: 1px;
+}
+
+/* Filter */
+.container {
+  overflow: hidden;
+}
+
+.filterDiv {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  margin: 2px;
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+
+ 
+ .clear {
+   margin-top: 15px;
+ }
+ .parallax {
+  /* The image used */
+  background-image: url("../background1.jpg");
+
+  /* Set a specific height */
+  height: 250px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.legend {
+  text-align: center !important;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.nomargin{ 
+  margin: 0;
+  padding: 0;
+  text-align: center !important;
+}
+.nomargin i {
+  text-align: center !important;
+  color: 232b2b;
+}
+.lessmenu{
+  padding-top: 15px;
+  padding-bottom: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.lessmargin{
+  padding-left: 0 !important;
+}
+.menulinks{
+  text-decoration: none;
+  color: 232b2b !important;
+}
+.menu {
+  border-radius: 5px;
+  padding: .84rem 1.6rem;
+}
+.logo{
+  padding: 30% 0;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 2.1rem;
+  color: #00b0ff;
+ }
+ .nav-item button p{
+  font-size: small;
+ }
+.nav-link{
+  padding-bottom: 0 !important;
+ }
+.nav-link p {
+  text-align: center;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0.7rem;
+}
+.backgrimg {
+  /* The image used */
+  background-image: url("../background1.jpg");
+  
+ 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main {
+  margin-bottom: 35px;
+}
+.row .col div p {
+  text-align: justify;
+}
+.top15{
+  margin-top: 8px;
+}
+.nav-link .fas {
+  padding: 0 20px !important;
+  text-align: center;
+ }
+.navbar {
+  padding: 0;
+}
+
+ @media only screen and (max-width : 992px) {
+  .parallax img {
+    max-height: 130%; /* or a little bit higher */
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .parallax img {
+    max-height: 170%; /* or higher percentages. It's up to your taste */
+  }
+}
+
+.blue_border {
+    border-bottom: 2px solid #00b0ff !important;
+    border-bottom-width: 50px;
+}
 
 nav ul a,
 nav .brand-logo {
-  color: white;
+  color: #000000;
 }
-
+.whitenav {
+  background-color: #ffffff;
+}
 p {
   line-height: 2rem;
 }
 
-.sidenav-trigger {
+.button-collapse {
   color: #26a69a;
 }
 
 .parallax-container {
-  min-height: 380px;
+  min-height: 350px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
@@ -55,22 +270,10 @@ p {
 footer.page-footer {
   margin: 0;
 }
-.light {text-align: justify;}
 
-.utilizacao > img.icons {
-  height: 30px;
-  width: 30px;
-}
-.utilizacao > h5 {
-  text-align: center;
-}
-.downloads > img.icons {
-  height: 30px;
-  width: 30px;
-}
-.downloads > h5 {
-  text-align: center;
-}
-h1, h2, h3, h4, h5 {
-  color:green;
-}
+
+
+
+
+
+

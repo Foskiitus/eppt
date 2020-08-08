@@ -1,0 +1,175 @@
+<html lang="pt">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Ecovias do Minho</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="./css/bootstrap.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="./css/mdb.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="./css/style.css" rel="stylesheet">
+
+</head>
+
+<body cz-shortcut-listen="true">
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-bottom navbar-dark default-color">
+  
+    <div class="container">
+      <div class="row myBtnContainer">
+      <button class="btn col" onclick="filterSelection('all')"><i class="fas fa-home fa-2x"><br><p>Todos</p></i></button>
+      <button class="btn col" onclick="filterSelection('cars')"> <i class="fas fa-university fa-2x"><br><p>Cultura</p></i></button>
+      <button class="btn col" onclick="filterSelection('cultura')"> <i class="fas fa-tree fa-2x"><br><p>Jardins</p></i></button>
+      <button class="btn col" onclick="filterSelection('fruits')"> <i class="fas fa-binoculars fa-2x"><br><p>Miradouros</p></i></button>
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- Navbar -->
+  
+  <!--Main layout-->
+  <main>
+    <nav class="navbar fixed-top navbar-light bg-light">
+      <a class="navbar-brand" href="/"><i class="fas fa-angle-left fa-2x"></i></a>
+      <a class="navbar-brand" href="#">Visitar</a>
+      <a class="navbar-brand" href="#"></a>
+    </nav>
+    <div class="container">
+      
+      <div class="start"></div>
+        <div class="row">
+
+  <!-- Portfolio Gallery Grid -->
+          <div class="filterDiv col-12 cultura">
+            <a href="#!">
+              <div class="card">
+
+                <!-- Card image -->
+                <div class="view overlay">
+                  <img class="card-img-top" src="https://lh3.googleusercontent.com/-6KaGbcOfdog/Us7U81yFfZI/AAAAAAAAAHA/9Q00BezGq24/w1200-h888-no/IMG_20140109_160206.jpg"
+                    alt="Santa Maria de Abade de Neiva">
+                  
+                    <div class="mask rgba-white-slight"></div>
+                  
+                </div>
+              
+                <!-- Card content -->
+                <div class="card-body">
+              
+                  <!-- Title -->
+                  <h4 class="card-title">Santa Maria de Abade de Neiva</h4>
+                  <!-- Text -->
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+              
+                </div>
+              
+              </div>
+            </a>
+          </div>
+          <div class="filterDiv col-12 cars">
+            <a href="#!">
+              <div class="card">
+
+                <!-- Card image -->
+                <div class="view overlay">
+                  <img class="card-img-top" src="https://lh3.googleusercontent.com/-6KaGbcOfdog/Us7U81yFfZI/AAAAAAAAAHA/9Q00BezGq24/w1200-h888-no/IMG_20140109_160206.jpg"
+                    alt="Santa Maria de Abade de Neiva">
+                  
+                    <div class="mask rgba-white-slight"></div>
+                  
+                </div>
+              
+                <!-- Card content -->
+                <div class="card-body">
+              
+                  <!-- Title -->
+                  <h4 class="card-title">Santa Maria de Abade de Neiva</h4>
+                  <!-- Text -->
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+              
+                </div>
+              
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="./js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="./js/mdb.min.js"></script><div class="hiddendiv common"></div>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    
+    filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+
+</body>
+</html>
